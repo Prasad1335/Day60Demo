@@ -1,0 +1,28 @@
+﻿@model Day60Demo.ViewModel.GeneralPageViewModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+@section MySpecialStyles
+{
+    <style type="text/css">
+        body {
+            background: pink;
+        }
+    </style>
+}
+
+<div style="background: @Model.FestivalTheme.Background;">
+    <h1>@ViewData["Title"]</h1>
+
+    <h3><span class="text-secondary">@Model.CompanyDetails.Title</span>@Model.CompanyDetails.Slogan</h3>
+
+    <p>Use this page to detail your site's privacy policy.</p>
+</div>
+
+@section Scripts
+{
+    <script type="text/javascript">
+        alert("Hello welcome to privacy");
+    </script>
+}

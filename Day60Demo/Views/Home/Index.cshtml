@@ -1,0 +1,31 @@
+﻿@model Day60Demo.ViewModel.GeneralPageViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center" style="background: @Model.FestivalTheme.Background;">
+    <h1 class="display-4">Welcome</h1>
+    <h3><span class="text-secondary">@Model.CompanyDetails.Title</span>@Model.CompanyDetails.Slogan</h3>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@section Scripts
+{
+    <script type="text/javascript">
+        alert("Hello welcome to Home");
+    </script>
+    
+    @{
+        var obj = TempData["Test"];
+
+        if (obj == null)
+            obj = 0;
+
+        var count = Convert.ToInt32(obj);
+        count++;
+
+        TempData["Test"] = count;
+    }
+    <hr />
+    <h2>You are visitor no @count</h2>
+}
